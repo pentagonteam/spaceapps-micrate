@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Challenges of Microgravity on Salyut 3</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #0d0d0d;
+      color: #ffffff;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    h1, h2 {
+      margin-bottom: 20px;
+    }
+    p {
+      margin-bottom: 15px;
+    }
+    a {
+      color: #03a9f4;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+      overflow: hidden;
+    }
+    header {
+      background: url('space-background.jpg') no-repeat center center/cover;
+      height: 100vh;
+      text-align: center;
+      color: #ffffff;
+      position: relative;
+      z-index: 1;
+    }
+    header::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(13, 13, 13, 0.7);
+      z-index: -1; /* Ensure the overlay stays behind the content */
+    }
+    header h1 {
+      position: relative;
+      font-size: 3.5em;
+      padding-top: 40vh;
+      animation: floatTitle 5s infinite ease-in-out;
+      z-index: 2;
+    }
+    .talk-button {
+      display: inline-block;
+      padding: 10px 20px;
+      margin-top: 20px;
+      font-size: 1.2em;
+      color: #fff;
+      background-color: #c6a900; /* Dark yellow color */
+      border: none;
+      border-radius: 25px; /* Rounded corners */
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s;
+      position: relative;
+      z-index: 2; /* Ensure the button stays above the overlay */
+    }
+    .talk-button:hover {
+      background-color: #b59e00; /* Slightly darker on hover */
+    }
+    section {
+      padding: 60px 0;
+      border-bottom: 1px solid #333;
+    }
+    section h2 {
+      text-align: center;
+      font-size: 2.5em;
+      margin-bottom: 40px;
+    }
+    .content {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+    .content img {
+      flex: 1 1 40%;
+      max-width: 500px;
+      margin: 0 20px;
+      border-radius: 10px;
+      animation: floatImage 6s infinite ease-in-out;
+    }
+    @keyframes floatImage {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+    .content .text {
+      flex: 1 1 50%;
+      max-width: 600px;
+      margin: 0 20px;
+    }
+    .fact-box {
+      background-color: #1e1e1e;
+      padding: 20px;
+      margin-top: 20px;
+      border-left: 5px solid #03a9f4;
+      position: relative;
+    }
+    .fact-box::before {
+      content: '!';
+      position: absolute;
+      top: -15px;
+      left: -15px;
+      background-color: #03a9f4;
+      color: #ffffff;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 1.5em;
+    }
+    .fact-box:hover {
+      background-color: #292929;
+    }
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.5em;
+      }
+      .content {
+        flex-direction: column;
+      }
+      .content img, .content .text {
+        margin: 20px 0;
+        max-width: 100%;
+      }
+    }
+    footer {
+      background-color: #111;
+      color: #ccc;
+      text-align: center;
+      padding: 20px 0;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Challenges of Microgravity on Salyut 3</h1>
+  <a href="chatbotindex.html" class="talk-button">Talk to CLARD</a>
+</header>
+
+<div class="container">
+
+  <section>
+    <h2>Fluid Redistribution</h2>
+    <div class="content">
+      <img src="Salyut 3 1.png" alt="Fluid Redistribution Effects on Salyut 3">
+      <div class="text">
+        <p>
+          In microgravity, bodily fluids shift from the lower body to the upper body and head, leading to facial puffiness, nasal congestion, and discomfort.
+        </p>
+        <div class="fact-box">
+          <p>
+            <strong>Did you know?</strong> This shift can increase intracranial pressure, affecting vision temporarily.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Radiation Exposure</h2>
+    <div class="content">
+      <img src="Salyut 3 2.webp" alt="Radiation Exposure in Space">
+      <div class="text">
+        <p>
+          Exposure to cosmic radiation is a significant concern for astronauts. Although missions were shorter on Salyut 3, the risk of radiation exposure remained elevated compared to Earth.
+        </p>
+        <div class="fact-box">
+          <p>
+            <strong>Interesting Fact:</strong> Long-term exposure to space radiation can increase the risk of cancer and other health issues.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Decreased Coordination and Reaction Time</h2>
+    <div class="content">
+      <img src="Salyut 3 3.jpg" alt="Astronauts Training for Coordination in Space">
+      <div class="text">
+        <p>
+          Microgravity affects motor skills and reaction times, requiring astronauts to retrain their coordination for tasks and adapt to their new environment.
+        </p>
+        <div class="fact-box">
+          <p>
+            <strong>Fun Fact:</strong> It took time for astronauts to adjust to the weightlessness, leading to initial mistakes in performing tasks.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Altered Sleep Patterns</h2>
+    <div class="content">
+      <img src="Salyut 3 4.jpg" alt="Astronauts Struggling with Sleep in Space">
+      <div class="text">
+        <p>
+          The absence of a natural day-night cycle in space can disrupt circadian rhythms, leading to sleep disorders and affecting astronauts' performance.
+        </p>
+        <div class="fact-box">
+          <p>
+            <strong>Did you know?</strong> Astronauts on Salyut 3 often had to implement strict sleep schedules to maintain their focus.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Nutritional Challenges</h2>
+    <div class="content">
+      <img src="Salyut 3 5" alt="Astronauts Eating in Space">
+      <div class="text">
+        <p>
+          Preparing and consuming food in microgravity can be difficult, requiring careful packaging to prevent spillage and ensure adequate nutrition.
+        </p>
+        <div class="fact-box">
+          <p>
+            <strong>Interesting Fact:</strong> Food options were limited, and astronauts had to make do with pre-packaged meals designed for space.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <p>
+    Information sourced from <a href="https://www.nasa.gov" target="_blank">NASA Official Website</a>. All content is intended for educational purposes.
+  </p>
+</footer>
+
+</body>
+</html>

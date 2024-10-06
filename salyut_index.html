@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Challenges of Microgravity on Skylab Space Station</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts for professional typography -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <!-- CSS Styles -->
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #0d0d0d;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        h1, h2 {
+            margin-bottom: 20px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        a {
+            color: #03a9f4;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        /* Container */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            overflow: hidden;
+        }
+        /* Header Section */
+        header {
+            background: url('space-background.jpg') no-repeat center center/cover;
+            height: 100vh;
+            text-align: center;
+            color: #ffffff;
+            position: relative;
+        }
+        header::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(13, 13, 13, 0.7);
+        }
+        header h1 {
+            position: relative;
+            font-size: 3.5em;
+            padding-top: 40vh;
+            animation: floatTitle 5s infinite ease-in-out;
+        }
+        @keyframes floatTitle {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        /* Section Styles */
+        section {
+            padding: 60px 0;
+            border-bottom: 1px solid #333;
+        }
+        section h2 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 40px;
+        }
+        /* Content Layout */
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+        .content img {
+            flex: 1 1 40%;
+            max-width: 500px;
+            margin: 0 20px;
+            border-radius: 10px;
+            animation: floatImage 6s infinite ease-in-out;
+        }
+        @keyframes floatImage {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+        .content .text {
+            flex: 1 1 50%;
+            max-width: 600px;
+            margin: 0 20px;
+        }
+        /* Fact Box */
+        .fact-box {
+            background-color: #1e1e1e;
+            padding: 20px;
+            margin-top: 20px;
+            border-left: 5px solid #03a9f4;
+            position: relative;
+        }
+        .fact-box::before {
+            content: '!';
+            position: absolute;
+            top: -15px;
+            left: -15px;
+            background-color: #03a9f4;
+            color: #ffffff;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+        .fact-box:hover {
+            background-color: #292929;
+        }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5em;
+            }
+            .content {
+                flex-direction: column;
+            }
+            .content img, .content .text {
+                margin: 20px 0;
+                max-width: 100%;
+            }
+        }
+        /* Footer Styles */
+        footer {
+            background-color: #111;
+            color: #ccc;
+            text-align: center;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Challenges of Microgravity on Skylab Space Station</h1>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container">
+
+        <!-- Section 1: Physical Disorientation and Space Sickness -->
+        <section>
+            <h2>Physical Disorientation and Space Sickness</h2>
+            <div class="content">
+                <img src="Skylab 1.jpg" alt="Astronaut Experiencing Space Sickness">
+                <div class="text">
+                    <p>
+                        Upon arrival in Skylab, astronauts often faced severe physical disorientation and space sickness due to microgravity. Without the familiar pull of gravity, their inner ears, which help control balance, struggled to adjust. This resulted in nausea, dizziness, and difficulty in moving around the station.
+                    </p>
+                    <div class="fact-box">
+                        <p>
+                            <strong>Did you know?</strong> Nearly 50% of astronauts on Skylab experienced space motion sickness during the first few days of their missions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Muscle and Bone Deterioration -->
+        <section>
+            <h2>Muscle and Bone Deterioration</h2>
+            <div class="content">
+                <img src="Skylab 2.webp" alt="Exercise on Skylab Space Station">
+                <div class="text">
+                    <p>
+                        Microgravity environments cause rapid deterioration of muscles and bones, as they are no longer subjected to the same forces as on Earth. Astronauts on Skylab had to perform rigorous exercise routines to slow down this loss. However, despite these measures, they still experienced significant muscle weakening and bone density loss during long missions.
+                    </p>
+                    <div class="fact-box">
+                        <p>
+                            <strong>Interesting Fact:</strong> Astronauts on Skylab lost up to 1% of their bone mass per month due to the lack of gravitational load.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Environmental Systems Failures -->
+        <section>
+            <h2>Environmental Systems Failures</h2>
+            <div class="content">
+                <img src="Skylab 3.jpg" alt="Environmental Systems on Skylab">
+                <div class="text">
+                    <p>
+                        Skylab's environmental systems, designed to regulate temperature, humidity, and oxygen levels, sometimes malfunctioned. These failures forced the astronauts to work in uncomfortable conditions, including extreme heat or cold. The failure of the station's sunshade after launch led to Skylab overheating, and the astronauts had to install a replacement to bring the temperature down.
+                    </p>
+                    <div class="fact-box">
+                        <p>
+                            <strong>Surprising Fact:</strong> Temperatures inside Skylab exceeded 50°C (122°F) at one point, making it impossible for astronauts to work in some areas until repairs were made.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Psychological Effects of Extended Isolation -->
+        <section>
+            <h2>Psychological Effects of Extended Isolation</h2>
+            <div class="content">
+                <img src="Skylab 4.jpg" alt="Astronaut Coping with Isolation on Skylab">
+                <div class="text">
+                    <p>
+                        Long-duration missions on Skylab meant astronauts were isolated from their families and the familiar sights and sounds of Earth. This isolation, combined with the cramped quarters and high workloads, created psychological challenges. To mitigate these effects, the astronauts were given regular communication with Earth, movies, music, and recreational time.
+                    </p>
+                    <div class="fact-box">
+                        <p>
+                            <strong>Did you know?</strong> NASA developed special psychological support programs for Skylab astronauts, including weekly conversations with family members.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Equipment Malfunctions and Repairs -->
+        <section>
+            <h2>Equipment Malfunctions and Repairs</h2>
+            <div class="content">
+                <img src="Skylab 5.jpg" alt="Astronauts Performing Repairs on Skylab">
+                <div class="text">
+                    <p>
+                        Skylab faced numerous technical malfunctions during its missions, including solar panel issues, cooling system problems, and communication breakdowns. Astronauts were often tasked with performing complex repairs in microgravity, requiring them to adapt their skills to an unfamiliar, weightless environment.
+                    </p>
+                    <div class="fact-box">
+                        <p>
+                            <strong>Interesting Fact:</strong> Skylab's solar panel was damaged during launch, and astronauts conducted a spacewalk to deploy a replacement, allowing the station to continue functioning.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>
+            Information sourced from <a href="https://www.nasa.gov" target="_blank">NASA Official Website</a>. All content is intended for educational purposes.
+        </p>
+    </footer>
+
+</body>
+</html>

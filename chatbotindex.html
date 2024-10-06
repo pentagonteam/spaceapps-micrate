@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Clard - by Micrate</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                    'FILL' 0,
+                    'wght' 400,
+                    'GRAD' 0,
+                    'opsz' 24
+        }
+    </style>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            transition: background-color 0.5s ease, color 0.5s ease;
+        }
+
+        /* Light mode styles */
+        body.light-mode {
+            background: radial-gradient(circle at 50% 50%, #e0e6f7, #b5c3de);
+            color: black;
+        }
+
+        /* Dark mode styles */
+        body.dark-mode {
+            background: radial-gradient(circle at 50% 50%, #1e2952, #000000);
+            color: white;
+        }
+
+        #chat-container {
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+            width: 600px; /* Increased width */
+            position: relative;
+            z-index: 1;
+            transition: background-color 0.5s ease;
+        }
+
+        body.light-mode #chat-container {
+            background: rgba(255, 255, 255, 0.9);
+            color: black;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2rem;
+            letter-spacing: 2px;
+            color: #00d4ff;
+            transition: color 0.5s ease;
+        }
+
+        body.light-mode h1 {
+            color: #007acc;
+        }
+
+        #chat-history {
+            height: 400px; /* Adjusted height for larger width */
+            overflow-y: scroll;
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: inset 0px 0px 10px rgba(255, 255, 255, 0.1);
+            margin-bottom: 15px;
+            transition: background-color 0.5s ease, color 0.5s ease;
+        }
+
+        body.light-mode #chat-history {
+            background-color: rgba(0, 0, 0, 0.05);
+            color: black;
+            box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .user-message {
+            text-align: right;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            margin-bottom: 10px;
+            animation: fadeInUp 0.5s ease-in-out;
+            transition: background-color 0.5s ease, color 0.5s ease;
+        }
+
+        body.light-mode .user-message {
+            background-color: rgba(0, 0, 0, 0.1);
+            color: black;
+        }
+
+        .bot-message {
+            text-align: left;
+            padding: 10px;
+            background-color: rgba(0, 200, 255, 0.2);
+            border-radius: 10px;
+            margin-bottom: 10px;
+            animation: fadeInUp 0.5s ease-in-out;
+            transition: background-color 0.5s ease, color 0.5s ease;
+        }
+
+        body.light-mode .bot-message {
+            background-color: rgba(0, 150, 200, 0.2);
+            color: black;
+        }
+
+        form {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50px;
+            padding: 10px;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.5s ease;
+        }
+
+        body.light-mode form {
+            background: rgba(0, 0, 0, 0.1);
+            color: black;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        input {
+            flex-grow: 1;
+            margin-right: 10px;
+            padding: 15px;
+            background: transparent;
+            border: none;
+            border-radius: 50px;
+            color: white;
+            outline: none;
+            font-size: 1rem;
+            transition: background-color 0.5s ease, color 0.5s ease;
+        }
+
+        body.light-mode input {
+            color: black;
+        }
+
+        input::placeholder {
+            color: #ccc;
+        }
+
+        body.light-mode input::placeholder {
+            color: #666;
+        }
+
+        button {
+            background-color: #00d4ff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-size: 1rem;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
+            transition: all 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #00a0ff;
+            box-shadow: 0 10px 40px rgba(0, 160, 255, 0.5);
+            transform: translateY(-5px);
+        }
+
+        #loader {
+            display: none; /* Hide by default */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Space Background Animation */
+        body::before {
+            content: "";
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: url('https://www.transparenttextures.com/patterns/stardust.png');
+            background-size: cover;
+            z-index: -1;
+            animation: starry 60s linear infinite;
+            opacity: 0.2;
+        }
+
+        @keyframes starry {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(-50px, -50px); }
+        }
+
+        /* Light/Dark mode toggle button */
+        #theme-toggle {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #00d4ff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-size: 1rem;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
+            transition: all 0.3s ease-in-out;
+        }
+
+        #theme-toggle:hover {
+            background-color: #00a0ff;
+            box-shadow: 0 10px 40px rgba(0, 160, 255, 0.5);
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body class="dark-mode"> <!-- Default to dark mode -->
+<div id="loader">
+    <img src="loader.gif" width="150px" alt="Loading...">
+</div>
+
+<div id="chat-container">
+    <h1>Clard - by Micrate</h1>
+    <div id="chat-history"></div>
+    <form id="chat-form">
+        <input type="text" id="user-input" placeholder="Enter your message">
+        <button type="submit">Send</button>
+        <button id="refreshNewChat"><span class="material-symbols-outlined">add_circle</span></button>
+    </form>
+</div>
+
+<!-- Light/Dark Mode Toggle -->
+<button id="theme-toggle">Switch to Light Mode</button>
+
+<script>
+    const chatForm = document.getElementById('chat-form');
+    const userInput = document.getElementById('user-input');
+    const chatHistory = document.getElementById('chat-history');
+    const loader = document.getElementById('loader');
+    const themeToggle = document.getElementById('theme-toggle');
+
+    // Light/Dark mode toggle
+    themeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        document.body.classList.toggle('light-mode');
+        themeToggle.innerText = document.body.classList.contains('light-mode') ? 'Switch to Dark Mode' : 'Switch to Light Mode';
+    });
+
+    chatForm.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        const input = userInput.value.trim();
+        if (input === "") return;
+
+        chatHistory.innerHTML += `<div class="user-message">${input}</div>`;
+        userInput.value = '';
+        chatHistory.scrollTop = chatHistory.scrollHeight;
+
+        // Show loader
+        loader.style.display = 'block';
+
+        try {
+            const response = await fetch('http://localhost:3000/chat', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ userInput: input }),
+            });
+
+            // Check if the response is ok (status code 200-299)
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+
+            const data = await response.json();
+            chatHistory.innerHTML += `<div class="bot-message">${data.response}</div>`;
+        } catch (error) {
+            console.error('Error:', error);
+            const errorMessage = error.message ? error.message : 'Unknown error occurred.';
+            chatHistory.innerHTML += `<div class="bot-message">Error: ${errorMessage}</div>`;
+        } finally {
+            // Hide loader after the response is received
+            loader.style.display = 'none';
+            chatHistory.scrollTop = chatHistory.scrollHeight;
+        }
+    });
+
+    // Refresh chat function
+    document.getElementById("refreshNewChat").onclick = () => {
+        chatHistory.innerHTML = ""; // Clear chat history
+    };
+</script>
+</body>
+</html>

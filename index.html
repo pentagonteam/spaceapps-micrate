@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mirate - Microgravity Hardships</title>
+    <style>
+        /* Reset Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: 'Helvetica Neue', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: background-color 0.5s, color 0.5s;
+            overflow: hidden;
+            color: white;
+            scroll-behavior: smooth;
+        }
+
+        /* Starry Background for Space Effect */
+        body::before {
+            content: "";
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: url('https://www.transparenttextures.com/patterns/stardust.png');
+            background-size: cover;
+            z-index: -1;
+            animation: starry 50s linear infinite;
+            opacity: 0.3;
+        }
+
+        @keyframes starry {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(-50px, -50px); }
+        }
+
+        /* Light/Dark Mode Button */
+        .mode-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: transparent;
+            border: 2px solid white;
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: white;
+            cursor: pointer;
+            border-radius: 30px;
+            transition: background-color 0.5s, border-color 0.5s;
+        }
+
+        .mode-toggle:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Gradient Animation (Space Effect) */
+        body.light {
+            background: linear-gradient(135deg, #e0eafc, #cfdef3);
+            color: #333;
+        }
+
+        body.dark {
+            background: radial-gradient(circle at 50% 50%, #1e2952, #000000);
+            color: white;
+        }
+
+        body.light .mode-toggle {
+            border-color: #333;
+            color: #333;
+        }
+
+        /* Header */
+        h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 20px;
+            animation: fadeInDown 2s ease-in-out;
+            letter-spacing: 5px;
+            background: linear-gradient(135deg, #00ffe7, #007cf0, #00d4ff);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        p {
+            font-size: 1.5rem;
+            max-width: 800px;
+            text-align: center;
+            line-height: 1.7;
+            animation: fadeInUp 3s ease-in-out;
+            margin: 20px auto;
+        }
+
+        /* Button Styles */
+        .button-group {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .button {
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            color: white;
+            background: #007cf0;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            position: relative;
+            transition: background 0.3s ease-in-out, transform 0.3s ease;
+            overflow: hidden;
+            z-index: 1;
+            box-shadow: 0 10px 30px rgba(0, 124, 240, 0.5);
+        }
+
+        .button:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300%;
+            height: 300%;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            transition: transform 0.5s ease-in-out;
+            z-index: -1;
+        }
+
+        .button:hover:before {
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        .button:hover {
+            transform: translateY(-10px);
+            background: #00d4ff;
+        }
+
+        /* Buttons */
+        .button:first-child {
+            background: #00ffe7;
+            box-shadow: 0 10px 30px rgba(0, 255, 231, 0.5);
+        }
+
+        .button:first-child:hover {
+            background: #00d4ff;
+        }
+
+        /* Floating Animation */
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* Button Floating */
+        .button-group {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        /* Dark Mode Adjustments */
+        body.dark h1 {
+            background: linear-gradient(135deg, #00d4ff, #ff00d4);
+            -webkit-background-clip: text;
+        }
+
+        body.light h1 {
+            background: linear-gradient(135deg, #002f4b, #dcf9fe);
+            -webkit-background-clip: text;
+        }
+    </style>
+</head>
+<body class="dark">
+
+<!-- Mode Toggle Button -->
+<button class="mode-toggle" id="modeToggle">Light Mode</button>
+
+<!-- Main Section -->
+<div class="container">
+    <h1>Micrate - The MicroGravity explorer</h1>
+    <p>Explore the challenges and wonders of microgravity. Dive into an extraordinary world where gravity is just a suggestion, and innovation takes flight.</p>
+    <div class="button-group">
+        <a href="homeindex.html">
+            <button class="button">Micrate - 3D Model Gallery</button>
+        </a>
+        <a href="chatbotindex.html">
+            <button class="button">Talk to Clard</button>
+        </a>
+    </div>
+</div>
+
+<script>
+    // Light/Dark Mode Toggle Script
+    const modeToggle = document.getElementById('modeToggle');
+    const body = document.body;
+
+    modeToggle.addEventListener('click', () => {
+        body.classList.toggle('light');
+        body.classList.toggle('dark');
+
+        if (body.classList.contains('light')) {
+            modeToggle.textContent = 'Dark Mode';
+        } else {
+            modeToggle.textContent = 'Light Mode';
+        }
+    });
+</script>
+</body>
+</html>

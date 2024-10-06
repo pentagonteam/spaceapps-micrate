@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Challenges of Microgravity on Mir Space Station</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts for professional typography -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <!-- CSS Styles -->
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #0d0d0d;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        h1, h2 {
+            margin-bottom: 20px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        a {
+            color: #03a9f4;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        /* Container */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            overflow: hidden;
+        }
+        /* Header Section */
+        header {
+            background: url('space-background.jpg') no-repeat center center/cover;
+            height: 100vh;
+            text-align: center;
+            color: #ffffff;
+            position: relative;
+        }
+        header::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(13, 13, 13, 0.7);
+        }
+        header h1 {
+            position: relative;
+            font-size: 3.5em;
+            padding-top: 40vh;
+            animation: floatTitle 5s infinite ease-in-out;
+        }
+        @keyframes floatTitle {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        /* Section Styles */
+        section {
+            padding: 60px 0;
+            border-bottom: 1px solid #333;
+        }
+        section h2 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 40px;
+        }
+        /* Content Layout */
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+        .content img {
+            flex: 1 1 40%;
+            max-width: 500px;
+            margin: 0 20px;
+            border-radius: 10px;
+            animation: floatImage 6s infinite ease-in-out;
+        }
+        @keyframes floatImage {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+        .content .text {
+            flex: 1 1 50%;
+            max-width: 600px;
+            margin: 0 20px;
+        }
+        /* Fact Box */
+        .fact-box {
+            background-color: #1e1e1e;
+            padding: 20px;
+            margin-top: 20px;
+            border-left: 5px solid #03a9f4;
+            position: relative;
+        }
+        .fact-box::before {
+            content: '!';
+            position: absolute;
+            top: -15px;
+            left: -15px;
+            background-color: #03a9f4;
+            color: #ffffff;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+        .fact-box:hover {
+            background-color: #292929;
+        }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5em;
+            }
+            .content {
+                flex-direction: column;
+            }
+            .content img, .content .text {
+                margin: 20px 0;
+                max-width: 100%;
+            }
+        }
+        /* Footer Styles */
+        footer {
+            background-color: #111;
+            color: #ccc;
+            text-align: center;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Challenges of Microgravity on Mir Space Station</h1>
+        <br>
+        <a class="button" href="chatbotindex.html">Talk to Clard</a>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container">
+
+        <!-- Section 1: Orientation and Spatial Awareness Issues -->
+        <section>
+            <h2>Orientation and Spatial Awareness Issues</h2>
+            <div class="content">
+                <img src="Mir(1).jpg" alt="Astronaut Experiencing Microgravity on Mir">
+                <div class="text">
+                    <p>
+                        Microgravity on Mir caused astronauts to lose their usual sense of direction and orientation. With no clear "up" or "down," their brains had to adapt to an environment where their natural body positioning and movement were disrupted. Over time, astronauts learned to navigate the station more effectively, but initial disorientation was common.
+                    </p>
+                    <div class="fact-box">
+                        <p>
+                            <strong>Surprising Fact:</strong> Many Mir astronauts reported experiencing "space confusion" during the first few days in orbit, often feeling upside-down without realizing it.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Muscle and Bone Loss -->
+        <section>
+            <h2>Muscle and Bone Loss</h2>
+            <div class="content">
+                <img src="unnamed.jpg" alt="Exercise on Mir Space Station">
+                <div class="text">
+                    <p>
+                        Long stays on Mir resulted in severe muscle atrophy and bone density loss. Muscles, particularly in the legs and lower back, weakened due to the lack of gravitational resistance. Similarly, bones became more brittle as they lost the stress that helped maintain their strength on Earth.
+                    </p>
+                    <div class="fact-box">
+                        <p>
+                            <strong>Did you know?</strong> Despite exercising daily, some astronauts on Mir lost up to 2% of their bone mass each month, making recovery on Earth difficult.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Psychological Stress and Isolation -->
+        <section>
+            <h2>Psychological Stress and Isolation</h2>
+            <div class="content">
+                <img src="01j_sep2015_socks_say_max_live.webp" alt="Astronaut Coping with Isolation on Mir">
+                <div class="text">
+                    <p>
+                        Mir's cramped conditions and extended missions tested the mental resilience of astronauts. Being away from family, combined with the stresses of performing complex tasks in a confined environment, often led to psychological strain. Crew members faced mood swings, sleep disorders, and even feelings of claustrophobia.
+                    </p>
+                    <div class="fact-box">
+                        <p>
+                            <strong>Fun Fact:</strong> To combat psychological stress, astronauts on Mir were allowed to listen to music, watch movies, and communicate with loved ones during their downtime.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Immune System Suppression -->
+        <section>
+            <h2>Immune System Suppression</h2>
+            <div class="content">
+                <img src="am.2020_04_10_22_11_5954_2020_04_14_MRI_astronauts_brain_images_400.avif" alt="Astronaut Immune Changes on Mir">
+                <div class="text">
+                    <p>
+                        Research on Mir revealed that the immune system weakens in space. Prolonged exposure to microgravity was shown to lower the body’s ability to fight off infections. The stress of the mission, along with isolation and altered sleep cycles, further contributed to this immune suppression, increasing the risk of illness.
+                    </p>
+                    <div class="fact-box">
+                        <p>
+                            <strong>Did you know?</strong> Some astronauts on Mir had to be quarantined before their return to Earth to ensure they did not carry spaceborne illnesses.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Equipment Failures and Maintenance Challenges -->
+        <section>
+            <h2>Equipment Failures and Maintenance Challenges</h2>
+            <div class="content">
+                <img src="sts089-346-007_orig-scaled-e1616338577301.jpg" alt="Astronauts Performing Repairs on Mir">
+                <div class="text">
+                    <p>
+                        Mir experienced frequent equipment malfunctions, including issues with life support, power systems, and computers. Repairing critical systems in a weightless environment proved to be a major challenge. Astronauts had to constantly innovate and adapt their repair techniques, often working under intense pressure to prevent serious consequences.
+                    </p>
+                    <div class="fact-box">
+                        <p>
+                            <strong>Surprising Fact:</strong> In 1997, a collision with a resupply ship severely damaged one of Mir's solar panels, leading to a power crisis that required immediate astronaut intervention.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>
+            Information sourced from <a href="https://www.nasa.gov" target="_blank">NASA Official Website</a>. All content is intended for educational purposes.
+        </p>
+    </footer>
+
+</body>
+</html>

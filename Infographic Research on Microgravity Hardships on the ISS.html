@@ -1,0 +1,262 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Infographic Research on Microgravity Hardships on the ISS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts for professional typography -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <!-- CSS Styles -->
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #0d0d0d;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        h1, h2 {
+            margin-bottom: 20px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        a {
+            color: #03a9f4;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        /* Container */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            overflow: hidden;
+        }
+        /* Header Section */
+        header {
+            background: url('space-background.jpg') no-repeat center center/cover;
+            height: 100vh;
+            text-align: center;
+            color: #ffffff;
+            position: relative;
+        }
+        header::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(13, 13, 13, 0.7);
+        }
+        header h1 {
+            position: relative;
+            font-size: 3.5em;
+            padding-top: 40vh;
+            animation: floatTitle 5s infinite ease-in-out;
+        }
+        @keyframes floatTitle {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        /* Section Styles */
+        section {
+            padding: 60px 0;
+            border-bottom: 1px solid #333;
+        }
+        section h2 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 40px;
+        }
+        /* Content Layout */
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+        .content img {
+            flex: 1 1 40%;
+            max-width: 500px;
+            margin: 0 20px;
+            border-radius: 10px;
+            animation: floatImage 6s infinite ease-in-out;
+        }
+        @keyframes floatImage {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+        .content .text {
+            flex: 1 1 50%;
+            max-width: 600px;
+            margin: 0 20px;
+        }
+        /* Fact Box */
+        .fact-box {
+            background-color: #1e1e1e;
+            padding: 20px;
+            margin-top: 20px;
+            border-left: 5px solid #03a9f4;
+            position: relative;
+        }
+        .fact-box::before {
+            content: '!';
+            position: absolute;
+            top: -15px;
+            left: -15px;
+            background-color: #03a9f4;
+            color: #ffffff;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+        .fact-box:hover {
+            background-color: #292929;
+        }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5em;
+            }
+            .content {
+                flex-direction: column;
+            }
+            .content img, .content .text {
+                margin: 20px 0;
+                max-width: 100%;
+            }
+        }
+        /* Footer Styles */
+        footer {
+            background-color: #111;
+            color: #ccc;
+            text-align: center;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Microgravity Hardships on the ISS</h1>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container">
+
+        <!-- Section 1: Bone and Muscle Loss -->
+        <section>
+            <h2>Bone and Muscle Loss</h2>
+            <br>
+            <a class="button" href="chatbotindex.html">Talk to Clard</a>
+            <div class="content">
+                <img src="ISS 1.webp" alt="Astronaut Exercising in Space">
+                <div class="text">
+                    <p>
+                        In microgravity, astronauts experience significant bone and muscle loss due to the lack of mechanical stress on their bodies. Without the constant pull of gravity, bones can lose density, and muscles can atrophy, requiring astronauts to exercise for at least two hours a day to mitigate these effects.
+                    </p>
+                    <div class="fact-box">
+                        <p>
+                            <strong>Did you know?</strong> Astronauts can lose up to 1% of their bone mass per month while in space, similar to the bone loss seen in elderly patients with osteoporosis on Earth.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Fluid Shifts -->
+        <section>
+            <h2>Fluid Shifts</h2>
+            <div class="content">
+                <img src="ISS 2.gif" alt="Astronaut Face Showing Fluid Shifts">
+                <div class="text">
+                    <p>
+                        Microgravity causes bodily fluids to redistribute towards the head, leading to facial puffiness and increased intracranial pressure. This can affect vision and lead to headaches, and it alters the sense of taste and smell, often making food seem bland.
+                    </p>
+                    <div class="fact-box">
+                        <p>
+                            <strong>Interesting Fact:</strong> Astronauts sometimes add extra spices or hot sauce to their food to enhance flavor due to altered taste sensations in space.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Space Motion Sickness -->
+        <section>
+            <h2>Space Motion Sickness</h2>
+            <div class="content">
+                <img src="ISS 3.jpg" alt="Astronaut Experiencing Motion Sickness">
+                <div class="text">
+                    <p>
+                        Upon entering microgravity, astronauts often experience space motion sickness, characterized by nausea and disorientation. This occurs because the inner ear's vestibular system, which helps control balance, receives conflicting signals in the absence of gravity.
+                    </p>
+                    <div class="fact-box">
+                        <p>
+                            <strong>Surprising Fact:</strong> Approximately 50% of astronauts experience space motion sickness during their first few days in orbit.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Exposure to Cosmic Radiation -->
+        <section>
+            <h2>Exposure to Cosmic Radiation</h2>
+            <div class="content">
+                <img src="ISS 4.png" alt="Visualization of Cosmic Radiation">
+                <div class="text">
+                    <p>
+                        Without Earth's protective atmosphere and magnetic field, astronauts are exposed to higher levels of cosmic radiation. This exposure increases the risk of cancer, damages the central nervous system, and can cause other health issues.
+                    </p>
+                    <div class="fact-box">
+                        <p>
+                            <strong>Did you know?</strong> A six-month mission on the ISS exposes astronauts to about the same amount of radiation as 1,000 chest X-rays.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Sleep Disruption -->
+        <section>
+            <h2>Sleep Disruption</h2>
+            <div class="content">
+                <img src="ISS 5.webp" alt="Astronaut Sleeping in Microgravity">
+                <div class="text">
+                    <p>
+                        The ISS orbits Earth every 90 minutes, resulting in 16 sunrises and sunsets each day. This rapid light-dark cycle can disrupt astronauts' circadian rhythms, leading to sleep deprivation and fatigue.
+                    </p>
+                    <div class="fact-box">
+                        <p>
+                            <strong>Interesting Fact:</strong> Astronauts often use eye masks and carefully planned schedules to help regulate their sleep patterns in space.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>
+            Information sourced from <a href="https://www.nasa.gov" target="_blank">NASA's Official Website</a>. All content is intended for educational purposes.
+        </p>
+    </footer>
+
+</body>
+</html>
